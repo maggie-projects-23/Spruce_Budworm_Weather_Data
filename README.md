@@ -1,3 +1,6 @@
+## Note: In progress.....
+Daily station data was downloaded from https://climate.weather.gc.ca/historical_data/search_historic_data_e.html using R
+
 # Spruce_Budworm_Weather_Data
 This project performs SQL-based data cleaning and transformation of daily weather data from provience weather stations. The goal is to group weather records by year and compute yearly averages for key weather metrics.
 
