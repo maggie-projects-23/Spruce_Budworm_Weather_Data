@@ -73,7 +73,7 @@ The script then creates a new table that contains yearly averages for the follow
       
 5. Add Degree Days
     - Add Degree Days to Daily table
-    - Create Temporary table to store the accumlate of Degree Days for each year
+    - Create Temporary table to store the accumlation of Degree Days for each year
     - Add days_until_89_degree_days_hit	 and degree_days_hit_on_July_1st to Yearly table
     
 7. Export to CSV
