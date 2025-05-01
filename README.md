@@ -46,23 +46,23 @@ The workflow:
 
 2. Compute Daily, Monthly Quarterly Variables in respective tables in order to calulate BioClim Variables
     - Daily Variables include:
-          - avg_max_temp
-          - avg_min_temp
-          - avg_mean_temp
-          - avg_total_precip
+    	 - avg_max_temp
+     	 - avg_min_temp
+    	 - avg_mean_temp
+    	 - avg_total_precip
     - Monthly Variables include:
-          - month_avg_max_temp
-          - month_avg_min_temp
-          - month_avg_mean_temp
-          - month_max_temp
-          -	month_min_temp
-          - mean_diurnal_range
-          -	month_total_precip
+   		- month_avg_max_temp
+   		- month_avg_min_temp
+   		- month_avg_mean_temp
+   		- month_max_temp
+   		- month_min_temp
+   		- mean_diurnal_range
+   		- month_total_precip
     - Quarterly Variables include:
-          - quarter_avg_max_temp
-          - quarter_avg_min_temp
-          - quarter_avg_mean_temp
-          - quarter_total_precip
+    	- quarter_avg_max_temp
+     	- quarter_avg_min_temp
+      	- quarter_avg_mean_temp
+      	- quarter_total_precip
 			
 4. Compute Yearly Averages and BioClim Variables
 The script then creates a new table that contains yearly averages for the following metrics along with all the BioClim variables listed previously:
