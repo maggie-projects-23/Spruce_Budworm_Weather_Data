@@ -26,6 +26,8 @@ We used BioClim (https://www.worldclim.org/data/bioclim.html) to find common wea
 # Spruce_Budworm_Weather_Data
 This project performs SQL-based data cleaning and transformation of daily weather data from provience weather stations. The goal is to group weather records by year and compute yearly averages for key weather metrics.
 
+Degree days were calulated using the method that has $\frac{(T_{Max}-T_{Min})}{2}=T_{Base}$ when $\frac{(T_{Max}-T_{Min})}{2}<T_{Base}$ (https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1086&context=usdaarsfacpub). $T_{Base}=8\degree C$ (https://academic.oup.com/jee/article-abstract/82/4/1161/2215153)
+
 ### Overview
 The workflow:
 - Extracts weather records from a SQLite database.
