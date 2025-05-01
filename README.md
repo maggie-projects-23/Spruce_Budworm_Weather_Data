@@ -32,9 +32,10 @@ Degree days were calulated using the method that has $\frac{(T_{Max}-T_{Min})}{2
 The workflow:
 - Extracts weather records from a SQLite database.
 - Assigns a yearly grouping to each record based on the date field.
-- Aggregates daily weather values into yearly averages.
+- Aggregates daily weather values into yearly averages and calulates BioClim variables.
+- Formulates Degree Days
 - Stores the aggregated results in a new table.
-- Exports the final dataset to a CSV file.
+- Exports the final datasets to a CSV file.
 
 
 ### Steps Performed
@@ -43,15 +44,40 @@ The workflow:
 
     - The results are converted into a pandas DataFrame and saved to a new SQL table:
 
-2. Compute Yearly Averages
-The script then creates a new table that contains yearly averages for the following metrics:
+2. Compute Daily, Monthly Quarterly Variables in respective tables in order to calulate BioClim Variables
+    - Daily Variables include:
+          - avg_max_temp
+          - avg_min_temp
+          - avg_mean_temp
+          - avg_total_precip
+    - Monthly Variables include:
+          - month_avg_max_temp
+          - month_avg_min_temp
+          - month_avg_mean_temp
+          - month_max_temp
+          -	month_min_temp
+          - mean_diurnal_range
+          -	month_total_precip
+    - Quarterly Variables include:
+          - quarter_avg_max_temp
+          - quarter_avg_min_temp
+          - quarter_avg_mean_temp
+          - quarter_total_precip
+			
+4. Compute Yearly Averages and BioClim Variables
+The script then creates a new table that contains yearly averages for the following metrics along with all the BioClim variables listed previously:
     - avg_max_temp
     - avg_min_temp
     - avg_mean_temp
     - avg_total_precip
+      
+5. Add Degree Days
+    - Add Degree Days to Daily table
+    - Create Temporary table to store the accumlate of Degree Days for each year
+    - Add days_until_89_degree_days_hit	 and degree_days_hit_on_July_1st to Yearly table
     
-3. Export to CSV
-    -The final table is read back into a DataFrame and exported to a CSV file:
+7. Export to CSV
+    -The Yearly table and Daily tables are read back into a DataFrame and exported to a CSV file:
 
 
 ## Requirements
